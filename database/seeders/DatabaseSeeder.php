@@ -18,7 +18,8 @@ class DatabaseSeeder extends Seeder
         
         $this->call([
             //UsersSeeder::class, //Comentou-se essa linha para essa seeder nao ser executada duas vezes
-            CategoriasSeeder::class,
+            //CategoriasSeeder::class,
+            ProdutosSeeder::class,
         ]);
     }
 }
