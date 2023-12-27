@@ -4,7 +4,6 @@
 
 @section('conteudo')
     <div class="row container"> {{-- Definição da Linha. O Materialize já traz uma estrutura responsiva --}}
-
         @foreach ($produtos as $produto)
             {{-- Coluna 1: Dispositivos com tela pequena a largura será de "12" e nos de tela média será "4" --}}
             <div class="col s12 m4">
@@ -20,6 +19,9 @@
                 </div>
             </div>
         @endforeach
+    </div>
 
+    <div class="row center"> {{-- Criacao da nevegacao entre as paginas --}}
+        {{ $produtos->links('custom/pagination') }}
     </div>
 @endsection
