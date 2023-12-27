@@ -13,13 +13,9 @@ class ProdutoController extends Controller
     public function index()
     {
         //return "IndexController";
-        //$produtos = Produto::all();
-        //return dd($produtos);
-        $nome = "Moises";
-        $idade = 25;
-        $html = "<h1>Ola eu sou H1</h1>";
+        $produtos = Produto::all();
 
-        return view('site/home', compact('nome', 'idade', 'html')); // o compact() eh igual a: ['nome'=>$nome, 'idade'=>$idade, 'html'=>$html];
+        return view('site/home', compact('produtos'));
     }
 
     /**

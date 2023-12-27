@@ -4,60 +4,22 @@
 
 @section('conteudo')
     <div class="row container"> {{-- Definição da Linha. O Materialize já traz uma estrutura responsiva --}}
-        {{-- Coluna 1: Dispositivos com tela pequena a largura será de "12" e nos de tela média será "3" --}}
-        <div class="col s12 m3">
-            <div class="card">
-                <div class="card-image">
-                  <img src="images/sample-1.jpg">
-                  <span class="card-title">Card Title</span>
-                  <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">visibility</i></a>
-                </div>
-                <div class="card-content">
-                  <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
-                </div>
-            </div>
-        </div>
 
-        {{-- Coluna 2: Dispositivos com tela pequena a largura será de "12" e nos de tela média será "3" --}}
-        <div class="col s12 m3">
-            <div class="card">
-                <div class="card-image">
-                  <img src="images/sample-1.jpg">
-                  <span class="card-title">Card Title</span>
-                  <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
-                </div>
-                <div class="card-content">
-                  <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
+        @foreach ($produtos as $produto)
+            {{-- Coluna 1: Dispositivos com tela pequena a largura será de "12" e nos de tela média será "4" --}}
+            <div class="col s12 m4">
+                <div class="card">
+                    <div class="card-image">
+                        <img src="{{ $produto->imagem }}">
+                        <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">visibility</i></a>
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title">{{ $produto->nome }}</span>
+                        <p>{{ Str::limit($produto->descricao, 20) }}</p>
+                    </div>
                 </div>
             </div>
-        </div>
+        @endforeach
 
-        {{-- Coluna 3: Dispositivos com tela pequena a largura será de "12" e nos de tela média será "3" --}}
-        <div class="col s12 m3">
-            <div class="card">
-                <div class="card-image">
-                  <img src="images/sample-1.jpg">
-                  <span class="card-title">Card Title</span>
-                  <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
-                </div>
-                <div class="card-content">
-                  <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
-                </div>
-            </div>
-        </div>
-
-        {{-- Coluna 4: Dispositivos com tela pequena a largura será de "12" e nos de tela média será "3" --}}
-        <div class="col s12 m3">
-            <div class="card">
-                <div class="card-image">
-                  <img src="images/sample-1.jpg">
-                  <span class="card-title">Card Title</span>
-                  <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
-                </div>
-                <div class="card-content">
-                  <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
-                </div>
-            </div>
-        </div>
     </div>
 @endsection
