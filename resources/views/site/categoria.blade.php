@@ -5,7 +5,7 @@
 @section('conteudo')
     <div class="row container"> {{-- Definição da Linha. O Materialize já traz uma estrutura responsiva --}}
         
-        <h3>Categoria: </h3>
+        <h5>Categoria: {{ $categoria->nome }} </h5>
         
         @foreach ($produtos as $produto)
             {{-- Coluna 1: Dispositivos com tela pequena a largura será de "12" e nos de tela média será "4" --}}

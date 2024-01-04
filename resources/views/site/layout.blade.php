@@ -22,7 +22,7 @@
         <div class="nav-wrapper container">
           <a href="#" class="brand-logo center">CursoLaravel</a>
           <ul id="nav-mobile" class="left">
-            <li><a href="">Home</a></li>
+            <li><a href=" {{ route('site.index') }} ">Home</a></li>
             <li><a href="" class="dropdown-trigger" data-target='dropdown1'> Categoria <i class="material-icons right">expand_more</i> </a></li> <!-- Dropdown Trigger Implementation -->
             <li><a href="">Carrinho</a></li>
           </ul>
