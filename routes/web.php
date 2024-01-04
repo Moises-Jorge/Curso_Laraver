@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CarrinhoController;
 use App\Http\Controllers\ProdutoController;
 use App\Http\Controllers\SiteController;
 use Illuminate\Support\Facades\Route;
@@ -23,3 +24,6 @@ Route::get('/produto/{slug}', [SiteController::class, 'details'])->name('site.de
 
 //Rota para listar os produtos de uma determinada categoria
 Route::get('/categoria/{id}', [SiteController::class, 'categoria'])->name('site.categoria');
+
+// Rota responsável pelas ações do carrinho
+Route::get('/carrinho', [CarrinhoController::class, 'carrinhoLista'])->name('site.carrinho');
