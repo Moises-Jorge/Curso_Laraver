@@ -20,4 +20,11 @@ class SiteController extends Controller
 
         return view('site/details', compact('produto'));
     }
+
+    // Criando o Metodo "categoria" que vai ser executado na rota "/categoria"
+    public function categoria($id) {
+        $produtos = Produto::where('id_categoria', $id)->paginate(3);
+
+        return view('site/categoria', compact('produtos'));
+    }
 }
