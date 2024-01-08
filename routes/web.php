@@ -20,6 +20,7 @@ Route::resource('produtos', ProdutoController::class);
 
 Route::get('/', [SiteController::class, 'index'])->name('site.index');
 
+// Rota responsável por apresentar os detalhes de cada produto
 Route::get('/produto/{slug}', [SiteController::class, 'details'])->name('site.details');
 
 //Rota para listar os produtos de uma determinada categoria
